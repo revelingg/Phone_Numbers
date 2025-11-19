@@ -7,34 +7,21 @@ Collaboration between Aggrey and Dante
 
 **Overview**
 
-  Handles multiple phone number formats
-  
-  Converts letters to digits (e.g., 1-800-POTATO-3)
-  
-  Validates numbers using NANP rules
-  
-  Stores area_code, exchange_code, and line_number
-  
-  Supports comparison, printing, and integer conversion
-  
-  Reads a file of names and numbers, returning a sorted list
+  1. Handles multiple phone number formats
+  2. Converts letters to digits (e.g., 1-800-POTATO-3)
+  3. Validates numbers using NANP rules
+  4. Stores area_code, exchange_code, and line_number
+  5. Supports comparison, printing, and integer conversion
+  6. Reads a file of names and numbers, returning a sorted list
 
-Features
+**Features**
 
-PhoneNumber Class
-
-Accepts strings or integers
-
-Removes extra symbols
-
-Validates NANP rules
-
-Implements int(), str(), repr(), and < operator
-
-read_numbers() Function
-
-Reads a UTF-8 file
-
-Extracts names and phone numbers
-
-Returns a sorted list of valid (name, PhoneNumber) tuples
+  1. PhoneNumber Class
+  2. Accepts strings or integers
+  3. Removes extra symbols
+  4. Validates NANP rules
+  5. Implements int(), str(), repr(), and < operator
+  6. read_numbers() Function
+  7. Reads a UTF-8 file
+  8. Extracts names and phone numbers
+  9. Returns a sorted list of valid (name, PhoneNumber) tuples
