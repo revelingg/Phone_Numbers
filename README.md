@@ -24,4 +24,4 @@ Collaboration between Aggrey and Dante
   6. read_numbers() Function
   7. Reads a UTF-8 file
   8. Extracts names and phone numbers
-  9. Returns a sorted list of valid (name, PhoneNumber) tuples
+  9. Returns a sorted list of valid (name, PhoneNumber(number) tuples
