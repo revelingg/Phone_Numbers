@@ -1,5 +1,4 @@
-# Phone_Numbers
-Collaboration between Aggrey and Ibukun
+# Phone_Numbers (Collaboration between Aggrey and Ibukun)
 
 **Phone Number Processor**
 
