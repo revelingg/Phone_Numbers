@@ -36,7 +36,6 @@ LETTER_TO_NUMBER = {
 }
 
 
-# Replace this comment with your implementation of the PhoneNumber class and
 
 def read_numbers(path):
     
@@ -59,16 +58,16 @@ def read_numbers(path):
         $   #must end with 4 digits, optionally +1 start with, any character that isnt a number for delimeters then 3,3,4
         """
         
-    with open(path, "r", encoding="utf-8") as file:
+    with open(path, "r", encoding="utf-8") as file:  #opens the file and reads it
         
         valid_obj = [
             (name, PhoneNumber(number))
             for line in file
             for name,number in [line.strip().split("\t")]
             if re.fullmatch(namp_pattern,number, re.VERBOSE)
-        ]
+        ]    #list comprehension to create the objects if they match the pattern
         
-        valid_obj = sorted(valid_obj, key=lambda x: x[1])
+        valid_obj = sorted(valid_obj, key=lambda x: x[1]) 
         
         return valid_obj
         
