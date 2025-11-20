@@ -37,6 +37,13 @@ LETTER_TO_NUMBER = {
 
 def read_numbers(path):
     
+    """ 
+        Reads in the numbers and returns if following NAMP rules
+       
+        Args: Takes in the path of the string
+        Returns: returns the list of objects
+        Side Effects: Raises value error when needed
+    """
     #namp numbers can have +,-, * and other seperatores
     namp_pattern = r"""
         ^(\+?1)?
@@ -102,6 +109,7 @@ class PhoneNumber():
             Validates the string to make sure its a proper phone number
             Args: 
                 Takes in the number
+            Side Effects: Raises value error when needed
             Returns: 
                 returns the valid strings
         """
