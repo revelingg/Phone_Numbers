@@ -66,7 +66,8 @@ def read_numbers(path):
             for name,number in [line.strip().split("\t")]
             if re.fullmatch(namp_pattern,number, re.VERBOSE)
         ]    #list comprehension to create the objects if they match the pattern
-        
+        if not valid_obj:
+            raise ValueError("No valid numbers found")
         valid_obj = sorted(valid_obj, key=lambda x: x[1]) 
         
         return valid_obj
@@ -92,6 +93,10 @@ class PhoneNumber():
             The init method for the phonenumber
             Args:
                 number: this will the (str) or (int) that contains the number to be processed
+            Raises:
+                TypeError: when the number is not a string or integer
+            Side Effects:
+                Sets the values of the object
             
                 
         """
