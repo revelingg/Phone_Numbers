@@ -59,13 +59,19 @@ def read_numbers(path):
         """
         
     with open(path, "r", encoding="utf-8") as file:  #opens the file and reads it
-        
-        valid_obj = [
-            (name, PhoneNumber(number))
-            for line in file
-            for name,number in [line.strip().split("\t")]
-            if re.fullmatch(namp_pattern,number, re.VERBOSE)
-        ]    #list comprehension to create the objects if they match the pattern
+        valid_obj = []
+        for line in file:
+            parts = line.strip().split("\t")
+            if len(parts) != 2:
+                # skip malformed lines
+                continue
+            name, number = parts
+            try:
+                pn = PhoneNumber(number)
+            except (ValueError, TypeError):
+                # skip invalid numbers
+                continue
+            valid_obj.append((name, pn))
         
         valid_obj = sorted(valid_obj, key=lambda x: x[1]) 
         
