@@ -108,8 +108,9 @@ class PhoneNumber():
         """
             Validates the string to make sure its a proper phone number
             Args: 
-                Takes in the number
-            Side Effects: Raises value error when needed
+                number(string): Takes in the number
+            Side Effects: 
+                Raises value error when needed
             Returns: 
                 returns the valid strings
         """
@@ -165,7 +166,7 @@ class PhoneNumber():
             Information representation of the string
             Returns: the informal string
         """
-        return f"({self.area_code}) {self.exchange_code}-{self.line_number}"
+        return f"({self.area_code}) {self.exchange_code}-{self.line_number}" 
         
     def __lt__(self,other):
         """
@@ -201,7 +202,7 @@ def main(path):
     n1 = PhoneNumber("1-800-POTATO-3")
     
     print(n1.area_code)
-    print(n1.line_number)
+    print(n1.line_number) 
     print(n1)
     print(repr(n1))
     print(n1.number)
